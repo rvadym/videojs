@@ -55,11 +55,6 @@ class Controller_TextVideoProcessor extends \AbstractController {
         foreach ($video_arr as $video) {
             if ($video['video_model']) {
                 $player->model = $video['video_model'];
-//                $player->bucket = $video['video_model']->get('bucket');
-//                $player->poster = $video['video_model']->get('poster');
-//                $player->mp4 = $video['video_model']->get('mp4');
-//                $player->webm = $video['video_model']->get('webm');
-//                $player->captions = $video['video_model']->get('captions');
 
                 $text = str_replace(
                     '['.$video['hash'].']',
