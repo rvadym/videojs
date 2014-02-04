@@ -1,0 +1,24 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Table `rvadym_videojs_video`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `rvadym_videojs_video` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `title` VARCHAR(255) NOT NULL ,
+  `poster` VARCHAR(255) NOT NULL ,
+  `mp4` VARCHAR(255) NOT NULL ,
+  `webm` VARCHAR(255) NOT NULL ,
+  `captions` VARCHAR(255) NULL ,
+  `hash` VARCHAR(45) NULL ,
+  `bucket` VARCHAR(255) NOT NULL ,
+  `created_at` TIMESTAMP NULL ,
+  `updated_at` TIMESTAMP NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB;
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
